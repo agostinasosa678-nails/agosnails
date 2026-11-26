@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agos Nails · Uñas en Formosa</title>
+  <meta name="description" content="Agos Nails — Cada detalle cuenta. Cada resultado enamora. Soft gel, semipermanente, extensiones y nail art en Formosa, también a domicilio. Reservá tu turno online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css?v=12" />
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav">
+    <a href="#inicio" class="nav__logo"><img src="img/logo-horizontal.svg" alt="agos nails" /></a>
+    <button class="nav__toggle" aria-label="Abrir menú" onclick="document.body.classList.toggle('menu-open')">☰</button>
+    <nav class="nav__links" onclick="document.body.classList.remove('menu-open')">
+      <a href="#nosotros">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#turnos" class="btn btn--small">Reservar turno</a>
+    </nav>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="inicio" class="hero">
+    <div class="hero__text">
+      <h1 class="hero__logo"><img src="img/logo.svg" alt="agos nails" /></h1>
+      <p class="tagline">Cada detalle cuenta.<br />Cada resultado enamora.</p>
+      <div class="hero__actions">
+        <a href="#turnos" class="btn">Reservá tu turno</a>
+        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+      </div>
+    </div>
+    <div class="hero__img">
+      <img src="img/hero.jpg" alt="Logo de Agos Nails" />
+    </div>
+  </section>
+
+  <!-- ========== VALORES ========== -->
+  <section class="valores">
+    <div class="valor">
+      <svg viewBox="0 0 48 48"><path d="M24 42c0-14 6-24 16-30-2 14-8 24-16 30zm0 0C24 30 18 20 8 14c2 14 8 24 16 28z"/></svg>
+      <h3>Delicado</h3>
+    </div>
+    <div class="valor">
+      <svg viewBox="0 0 48 48"><path d="M24 38c-4-6-4-14 0-24 4 10 4 18 0 24zm0 0c-6-2-11-8-12-18 7 3 11 9 12 18zm0 0c6-2 11-8 12-18-7 3-11 9-12 18zM6 30c5 6 11 8 18 8s13-2 18-8"/></svg>
+      <h3>Rejuvenecedor</h3>
+    </div>
+    <div class="valor">
+      <svg viewBox="0 0 48 48"><ellipse cx="24" cy="14" rx="7" ry="4"/><ellipse cx="24" cy="25" rx="11" ry="5"/><ellipse cx="24" cy="37" rx="15" ry="6"/></svg>
+      <h3>Relajante</h3>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE MÍ / MISIÓN / VISIÓN ========== -->
+  <section id="nosotros" class="section">
+    <h2 class="section__title">Sobre mí</h2>
+    <div class="sobre-mi">
+      <p class="sobre-mi__hola">¡Hola! Soy <strong>Agostina</strong> ♡</p>
+      <p>
+        Y <strong>agos nails</strong> es mi forma de hacer lo que más me apasiona: cuidar tus manos y
+        convertir cada uña en un pequeño detalle que te haga sonreír.
+      </p>
+      <p>
+        Creo que cuidarse no es un lujo, es un acto de amor propio. Por eso cada turno es tu momento:
+        un rato para frenar, relajarte y dejarte mimar, ya sea en mi espacio o en la comodidad de tu casa.
+      </p>
+      <p>
+        Trabajo con paciencia, prolijidad y productos de calidad, porque para mí cada detalle cuenta.
+        Y nada me hace más feliz que verte mirar tus manos y enamorarte del resultado.
+      </p>
+    </div>
+
+    <div class="motivacion">
+      <p>“Date el tiempo de cuidarte: vos también sos prioridad.”</p>
+      <p>“Las manos cuentan tu historia. Que cuenten lo hermosa que sos.”</p>
+      <p>“Sentirte linda empieza por un pequeño gesto para vos.”</p>
+    </div>
+
+    <article class="card mision-vision">
+      <div class="mv__parte">
+        <span class="card__icon">✦</span>
+        <h3>Misión</h3>
+        <p>Brindarte un servicio de uñas con calidad, higiene y atención personalizada, para que cada turno
+          sea una experiencia única y te vayas feliz y segura con tu resultado.</p>
+      </div>
+      <div class="mv__divisor" aria-hidden="true"><span>♡</span></div>
+      <div class="mv__parte">
+        <span class="card__icon">✦</span>
+        <h3>Visión</h3>
+        <p>Ser la manicura de confianza de Formosa, reconocida por la delicadeza de cada trabajo, la constante
+          capacitación y un trato cálido donde todas se sientan como en casa.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ========== SERVICIOS ========== -->
+  <section id="servicios" class="section section--tinted">
+    <h2 class="section__title">Servicios</h2>
+    <p class="section__lead">Elegí tu servicio y reservá tu turno online. <strong>¡También atiendo a domicilio!</strong></p>
+    <!-- Los servicios y precios se cargan desde el archivo servicios.js -->
+    <ul class="menu-servicios" id="lista-servicios"></ul>
+    <div class="domicilio">🛵 <span>Hago a domicilio</span> ♡</div>
+  </section>
+
+  <!-- ========== GALERÍA ========== -->
+  <!-- Para agregar fotos: copiarlas a la carpeta img/ y sumar un <img> más acá -->
+  <section id="galeria" class="section">
+    <h2 class="section__title">Galería</h2>
+    <p class="frase">“La perfección está en los detalles”</p>
+    <p class="section__lead">Algunos de mis trabajos favoritos.</p>
+    <div class="galeria">
+      <img src="img/trabajo1.jpg" alt="Nail art con diseños en blanco y negro" loading="lazy" />
+      <img src="img/trabajo2.jpg" alt="Diseño marmolado lila con dorado" loading="lazy" />
+      <img src="img/trabajo3.jpg" alt="Uñas rojas con diseño de corazones" loading="lazy" />
+      <img src="img/trabajo4.jpg" alt="Esmaltado efecto perla" loading="lazy" />
+      <img src="img/trabajo5.jpg" alt="Uñas bordó con estrellas doradas" loading="lazy" />
+      <img src="img/trabajo6.jpg" alt="Nail art verde, dorado y mariposa" loading="lazy" />
+    </div>
+    <p class="galeria__mas">Mirá muchos más trabajos en <a href="https://instagram.com/agostinasosa_ok" target="_blank" rel="noopener">@agostinasosa_ok</a></p>
+
+    <!-- VIDEOS (para más adelante): pegar el link "embed" de YouTube o Instagram y descomentar.
+    <h3 class="subtitle">Videos</h3>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO" allowfullscreen></iframe>
+    </div>
+    -->
+  </section>
+
+  <!-- ========== OPINIONES ========== -->
+  <!-- Las opiniones se cargan desde el archivo opiniones.js -->
+  <section id="opiniones" class="section section--tinted">
+    <h2 class="section__title">Opiniones</h2>
+    <p class="section__lead">Lo que dicen las clientas que ya se atendieron conmigo.</p>
+    <div class="cards cards--3" id="lista-opiniones"></div>
+    <p class="galeria__mas">¿Ya te atendiste? <a href="#" class="js-chat">Contame tu experiencia por WhatsApp</a> ♡</p>
+  </section>
+
+  <!-- ========== FRASE / LLAMADO A RESERVAR ========== -->
+  <section class="banda">
+    <span class="sparkle">✦</span>
+    <p class="banda__frase">Tu mejor versión, hasta la punta de tus uñas</p>
+    <a href="#turnos" class="btn btn--claro">Reservá tu turno</a>
+  </section>
+
+  <!-- ========== TURNOS ========== -->
+  <!-- Cal.com (gratis, sincroniza con Google Calendar). El link se configura abajo, en RESERVAS. -->
+  <section id="turnos" class="section">
+    <h2 class="section__title">Reservá tu turno</h2>
+    <p class="section__lead">Elegí el servicio, el día y el horario que más te convenga. Te llega la confirmación por email.</p>
+    <div class="turnos">
+      <iframe id="cal-iframe" title="Reservar turno" loading="lazy"></iframe>
+      <p class="nota">¿No ves el calendario? <a href="#turnos" class="js-reserva">Abrilo en una pestaña nueva</a>
+        · ¿Preferís hablar? <a href="#" class="js-chat">Escribime por WhatsApp</a></p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="section">
+    <h2 class="section__title">Contacto</h2>
+    <div class="contacto">
+      <div class="contacto__info">
+        <div class="dato"><h4>📍 Atención</h4><p>Formosa, Argentina · En el estudio y <strong>a domicilio</strong></p></div>
+        <div class="dato">
+          <h4>🕐 Horarios</h4>
+          <p>Todos los días: 8:00 a 22:00 hs</p>
+        </div>
+        <div class="dato"><h4>💬 WhatsApp</h4><p><a href="#" class="js-chat">370 464-1958</a></p></div>
+        <div class="dato"><h4>✉️ Email</h4><p><a href="mailto:agostinasosa678@gmail.com">agostinasosa678@gmail.com</a></p></div>
+        <div class="dato"><h4>📸 Instagram</h4><p><a href="https://instagram.com/agostinasosa_ok" target="_blank" rel="noopener">@agostinasosa_ok</a></p></div>
+      </div>
+      <div class="contacto__mapa">
+        <iframe src="https://www.google.com/maps?q=Formosa,+Formosa,+Argentina&output=embed" loading="lazy" title="Ubicación de Agos Nails"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p class="logo logo--small">agos <span>nails</span></p>
+    <p>Cada detalle cuenta. Cada resultado enamora. ♡</p>
+    <p class="footer__copy">© <span id="year"></span> Agos Nails</p>
+  </footer>
+
+  <!-- Botones flotantes: reservar turno + chat -->
+  <div class="flotantes">
+    <a href="#turnos" class="flot flot--turno js-reserva" aria-label="Reservar turno">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>
+      <span class="flot__texto">Reservar turno</span>
+    </a>
+    <a href="#contacto" class="flot flot--chat js-chat" aria-label="Escribime por WhatsApp">
+      <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg>
+    </a>
+  </div>
+
+  <script src="servicios.js?v=3"></script>
+  <script src="opiniones.js?v=3"></script>
+  <script>
+    // Dibuja las tarjetas de servicios a partir de servicios.js
+    const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    document.getElementById("lista-servicios").innerHTML = (typeof SERVICIOS !== "undefined" ? SERVICIOS : []).map(s => `
+      <li class="item">
+        <div class="item__linea">
+          <span class="item__nombre"><span class="item__estrella">✦</span> ${esc(s.nombre)}</span>
+          <span class="item__puntos"></span>
+          <span class="precio">${esc(s.precio)}</span>
+        </div>
+        <p class="item__detalle">${esc(s.detalle)}${s.detalle && s.descripcion ? " · " : ""}${esc(s.descripcion)}</p>
+      </li>`).join("");
+
+    // Dibuja las opiniones a partir de opiniones.js
+    document.getElementById("lista-opiniones").innerHTML = (typeof OPINIONES !== "undefined" ? OPINIONES : []).map(o => {
+      const n = Math.max(0, Math.min(5, Number(o.estrellas) || 0));
+      return `
+      <article class="card opinion">
+        <span class="opinion__comillas">“</span>
+        <div class="opinion__estrellas" aria-label="${n} de 5 estrellas">${"★".repeat(n)}${"☆".repeat(5 - n)}</div>
+        <p class="opinion__texto">${esc(o.comentario)}</p>
+        <div class="servicio__meta"><span class="opinion__nombre">${esc(o.nombre)}</span><span>${esc(o.servicio)}</span></div>
+      </article>`;
+    }).join("");
+
+    // ===== CONFIGURACIÓN: poné acá tu número de WhatsApp (código de país, sin + ni espacios) =====
+    const WHATSAPP = "5493704641958";
+    const MENSAJE = "Hola Agos! Quiero consultar por un turno 💅";
+    // ===== Link de la página de reservas (Cal.com) =====
+    const RESERVAS = "https://cal.com/agostina-sosa-nck3qb";
+    document.getElementById("cal-iframe").src = RESERVAS + "?embed=true&theme=light";
+
+    document.querySelectorAll(".js-reserva").forEach(a => {
+      a.href = RESERVAS;
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
+
+    document.querySelectorAll(".js-chat").forEach(a => {
+      a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MENSAJE)}`;
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
