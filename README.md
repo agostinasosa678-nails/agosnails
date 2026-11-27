@@ -15,7 +15,9 @@ Web estática (HTML + CSS + JS), publicada con GitHub Pages.
 | Entorno | Rama | URL |
 |---|---|---|
 | **Dev** (pruebas) | `main` | https://andresprommel-dev.github.io/agosnails/ — GitHub Pages |
-| **Prod** (la que ven las clientas) | `prod` | https://agosnails.pages.dev — Cloudflare Pages |
+| **Prod** (la que ven las clientas) | `prod` | https://agosnails.agostinasosa678.workers.dev — Cloudflare Workers |
+
+Repos: `andresprommel-dev/agosnails` y `agostinasosa678-nails/agosnails` (un `git push` sube a los dos). Cloudflare publica desde el repo de Agostina.
 
 **Flujo:** los cambios se suben a `main` → se revisan en Dev → cuando están OK se pasan a `prod`:
 
