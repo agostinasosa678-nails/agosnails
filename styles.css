@@ -455,3 +455,9 @@ a { color: var(--violeta); }
 .collage__brillo--b { bottom: 8%; }
 .hero .tagline { margin: 1.2rem 0 1.6rem; }
 .hero__logo img { width: min(330px, 75%); }
+
+/* ----- Menos espacio arriba del logo ----- */
+.hero { padding: 1.2rem 5% 2.2rem; align-items: center; }
+.collage { max-width: 430px; }
+.hero__logo img { width: min(300px, 70%); }
+.hero__text { padding-top: 0; }
