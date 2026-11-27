@@ -445,3 +445,13 @@ a { color: var(--violeta); }
 .collage__brillo { position: absolute; color: var(--dorado); z-index: 4; text-shadow: 0 0 8px rgba(255, 255, 255, .8); pointer-events: none; }
 .collage__brillo--a { top: 14%; right: 18%; font-size: 2rem; }
 .collage__brillo--b { bottom: 12%; left: 18%; font-size: 1.4rem; }
+
+/* ----- Inicio más bajo en vertical ----- */
+.hero { padding: 2.2rem 5% 2.8rem; gap: 2rem; }
+.collage { max-width: 470px; aspect-ratio: 1 / 1; border-radius: 180px 180px var(--radio) var(--radio); }
+.collage__foto--1 { top: 11%; }
+.collage__foto--2 { bottom: 5%; }
+.collage__brillo--a { top: 10%; }
+.collage__brillo--b { bottom: 8%; }
+.hero .tagline { margin: 1.2rem 0 1.6rem; }
+.hero__logo img { width: min(330px, 75%); }
