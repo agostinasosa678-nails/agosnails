@@ -12,16 +12,12 @@ Todo el contenido variable se edita en la **planilla de Google Sheets** (pestañ
 
 Web estática (HTML + CSS + JS), publicada con GitHub Pages.
 
-## Entornos
-| Entorno | Rama | URL |
-|---|---|---|
-| **Dev** (pruebas) | `main` | https://andresprommel-dev.github.io/agosnails/ — GitHub Pages |
-| **Prod** (la que ven las clientas) | `prod` | https://agosnails.agostinasosa678.workers.dev — Cloudflare Workers |
+## Publicación
+Una sola rama: **`main`**. Cada `git push` publica en los dos sitios:
+
+| Sitio | URL |
+|---|---|
+| Cloudflare (principal) | https://agosnails.agostinasosa678.workers.dev |
+| GitHub Pages | https://andresprommel-dev.github.io/agosnails/ |
 
 Repos: `andresprommel-dev/agosnails` y `agostinasosa678-nails/agosnails` (un `git push` sube a los dos). Cloudflare publica desde el repo de Agostina.
-
-**Flujo:** los cambios se suben a `main` → se revisan en Dev → cuando están OK se pasan a `prod`:
-
-```bash
-git checkout prod && git merge --ff-only main && git push && git checkout main
-```
