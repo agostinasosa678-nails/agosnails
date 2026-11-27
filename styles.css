@@ -423,3 +423,6 @@ a { color: var(--violeta); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Foto del inicio completa, sin recorte */
+.hero__img img { aspect-ratio: 3 / 4; height: auto; object-position: center; }
