@@ -424,5 +424,24 @@ a { color: var(--violeta); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-/* Foto del inicio completa, sin recorte */
-.hero__img img { aspect-ratio: 3 / 4; height: auto; object-position: center; }
+/* ----- Inicio: dos fotos dentro del arco (mismo tamaño que el original) ----- */
+.collage {
+  position: relative; width: 100%; max-width: 480px; aspect-ratio: 4 / 5; margin: auto; overflow: hidden;
+  border-radius: 200px 200px var(--radio) var(--radio); border: 3px solid var(--dorado); box-shadow: var(--sombra);
+  background:
+    radial-gradient(circle at 25% 20%, rgba(201, 167, 216, .55), transparent 55%),
+    radial-gradient(circle at 80% 85%, rgba(212, 152, 165, .5), transparent 55%),
+    var(--nude);
+}
+.hero__img .collage__foto {
+  position: absolute; width: 49%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+  border: 4px solid #fff; border-radius: 14px; max-width: none; margin: 0;
+  box-shadow: 0 0 0 1px var(--dorado), 0 14px 30px rgba(74, 42, 79, .28);
+  transition: transform .35s, box-shadow .35s;
+}
+.collage__foto--1 { left: 4%; top: 15%; transform: rotate(-4deg); z-index: 1; }
+.collage__foto--2 { right: 3%; bottom: 4%; transform: rotate(4deg); z-index: 2; }
+.collage__foto:hover { transform: rotate(0) scale(1.04); z-index: 3; box-shadow: 0 0 0 2px var(--dorado), 0 20px 40px rgba(74, 42, 79, .35); }
+.collage__brillo { position: absolute; color: var(--dorado); z-index: 4; text-shadow: 0 0 8px rgba(255, 255, 255, .8); pointer-events: none; }
+.collage__brillo--a { top: 14%; right: 18%; font-size: 2rem; }
+.collage__brillo--b { bottom: 12%; left: 18%; font-size: 1.4rem; }
