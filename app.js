@@ -8,7 +8,7 @@
    Si queda vacío, la web usa datos-respaldo.js.
    ===================================================================== */
 
-const PLANILLA_ID = "1fvjeHGtFdly7YzNnoVx6lg-fQ7Mts1OJ_FNGne8uZeo"; // planilla "AgosNails"
+const PLANILLA_ID = "1MiO-ZbLUSSBSGLwmnLdtdiBW2D1TfsjKIsGtdJ0fSuI"; // planilla "AgosNails"
 
 /* ------------------------------------------------------------------ */
 
