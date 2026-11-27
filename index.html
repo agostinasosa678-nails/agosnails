@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
   <link rel="icon" href="img/logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=13" />
 </head>
 <body>
 
@@ -104,7 +104,7 @@
   <section id="servicios" class="section section--tinted">
     <h2 class="section__title">Servicios</h2>
     <p class="section__lead">Elegí tu servicio y reservá tu turno online. <strong>¡También atiendo a domicilio!</strong></p>
-    <!-- Los servicios y precios se cargan desde el archivo servicios.js -->
+    <!-- Los servicios y precios se cargan desde la planilla (pestaña Servicios) -->
     <ul class="menu-servicios" id="lista-servicios"></ul>
     <div class="domicilio">🛵 <span>Hago a domicilio</span> ♡</div>
   </section>
@@ -115,15 +115,9 @@
     <h2 class="section__title">Galería</h2>
     <p class="frase">“La perfección está en los detalles”</p>
     <p class="section__lead">Algunos de mis trabajos favoritos.</p>
-    <div class="galeria">
-      <img src="img/trabajo1.jpg" alt="Nail art con diseños en blanco y negro" loading="lazy" />
-      <img src="img/trabajo2.jpg" alt="Diseño marmolado lila con dorado" loading="lazy" />
-      <img src="img/trabajo3.jpg" alt="Uñas rojas con diseño de corazones" loading="lazy" />
-      <img src="img/trabajo4.jpg" alt="Esmaltado efecto perla" loading="lazy" />
-      <img src="img/trabajo5.jpg" alt="Uñas bordó con estrellas doradas" loading="lazy" />
-      <img src="img/trabajo6.jpg" alt="Nail art verde, dorado y mariposa" loading="lazy" />
-    </div>
-    <p class="galeria__mas">Mirá muchos más trabajos en <a href="https://instagram.com/agostinasosa_ok" target="_blank" rel="noopener">@agostinasosa_ok</a></p>
+    <!-- Las fotos se cargan desde la planilla (pestaña Galeria) -->
+    <div class="galeria" id="lista-galeria"></div>
+    <p class="galeria__mas">Mirá muchos más trabajos en <a data-dato="instagram" href="https://instagram.com/agostinasosa_ok" target="_blank" rel="noopener">@agostinasosa_ok</a></p>
 
     <!-- VIDEOS (para más adelante): pegar el link "embed" de YouTube o Instagram y descomentar.
     <h3 class="subtitle">Videos</h3>
@@ -134,11 +128,12 @@
   </section>
 
   <!-- ========== OPINIONES ========== -->
-  <!-- Las opiniones se cargan desde el archivo opiniones.js -->
+  <!-- Las opiniones se cargan desde la planilla (pestaña Opiniones) -->
   <section id="opiniones" class="section section--tinted">
     <h2 class="section__title">Opiniones</h2>
     <p class="section__lead">Lo que dicen las clientas que ya se atendieron conmigo.</p>
     <div class="cards cards--3" id="lista-opiniones"></div>
+    <p class="resenas" data-dato="resenas" hidden><a href="#" class="btn btn--ghost" target="_blank" rel="noopener">★ Ver todas y dejar tu reseña en Google</a></p>
     <p class="galeria__mas">¿Ya te atendiste? <a href="#" class="js-chat">Contame tu experiencia por WhatsApp</a> ♡</p>
   </section>
 
@@ -166,14 +161,14 @@
     <h2 class="section__title">Contacto</h2>
     <div class="contacto">
       <div class="contacto__info">
-        <div class="dato"><h4>📍 Atención</h4><p>Formosa, Argentina · En el estudio y <strong>a domicilio</strong></p></div>
+        <div class="dato"><h4>📍 Atención</h4><p data-dato="zona">Formosa, Argentina · En el estudio y a domicilio</p></div>
         <div class="dato">
           <h4>🕐 Horarios</h4>
-          <p>Todos los días: 8:00 a 22:00 hs</p>
+          <p data-dato="horarios">Todos los días: 8:00 a 22:00 hs</p>
         </div>
-        <div class="dato"><h4>💬 WhatsApp</h4><p><a href="#" class="js-chat">370 464-1958</a></p></div>
-        <div class="dato"><h4>✉️ Email</h4><p><a href="mailto:agostinasosa678@gmail.com">agostinasosa678@gmail.com</a></p></div>
-        <div class="dato"><h4>📸 Instagram</h4><p><a href="https://instagram.com/agostinasosa_ok" target="_blank" rel="noopener">@agostinasosa_ok</a></p></div>
+        <div class="dato"><h4>💬 WhatsApp</h4><p><a href="#" class="js-chat" data-dato="whatsapp-texto">370 464-1958</a></p></div>
+        <div class="dato"><h4>✉️ Email</h4><p><a data-dato="email" href="mailto:agostinasosa678@gmail.com">agostinasosa678@gmail.com</a></p></div>
+        <div class="dato"><h4>📸 Instagram</h4><p><a data-dato="instagram" href="https://instagram.com/agostinasosa_ok" target="_blank" rel="noopener">@agostinasosa_ok</a></p></div>
       </div>
       <div class="contacto__mapa">
         <iframe src="https://www.google.com/maps?q=Formosa,+Formosa,+Argentina&output=embed" loading="lazy" title="Ubicación de Agos Nails"></iframe>
@@ -199,52 +194,7 @@
     </a>
   </div>
 
-  <script src="servicios.js?v=3"></script>
-  <script src="opiniones.js?v=3"></script>
-  <script>
-    // Dibuja las tarjetas de servicios a partir de servicios.js
-    const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-    document.getElementById("lista-servicios").innerHTML = (typeof SERVICIOS !== "undefined" ? SERVICIOS : []).map(s => `
-      <li class="item">
-        <div class="item__linea">
-          <span class="item__nombre"><span class="item__estrella">✦</span> ${esc(s.nombre)}</span>
-          <span class="item__puntos"></span>
-          <span class="precio">${esc(s.precio)}</span>
-        </div>
-        <p class="item__detalle">${esc(s.detalle)}${s.detalle && s.descripcion ? " · " : ""}${esc(s.descripcion)}</p>
-      </li>`).join("");
-
-    // Dibuja las opiniones a partir de opiniones.js
-    document.getElementById("lista-opiniones").innerHTML = (typeof OPINIONES !== "undefined" ? OPINIONES : []).map(o => {
-      const n = Math.max(0, Math.min(5, Number(o.estrellas) || 0));
-      return `
-      <article class="card opinion">
-        <span class="opinion__comillas">“</span>
-        <div class="opinion__estrellas" aria-label="${n} de 5 estrellas">${"★".repeat(n)}${"☆".repeat(5 - n)}</div>
-        <p class="opinion__texto">${esc(o.comentario)}</p>
-        <div class="servicio__meta"><span class="opinion__nombre">${esc(o.nombre)}</span><span>${esc(o.servicio)}</span></div>
-      </article>`;
-    }).join("");
-
-    // ===== CONFIGURACIÓN: poné acá tu número de WhatsApp (código de país, sin + ni espacios) =====
-    const WHATSAPP = "5493704641958";
-    const MENSAJE = "Hola Agos! Quiero consultar por un turno 💅";
-    // ===== Link de la página de reservas (Cal.com) =====
-    const RESERVAS = "https://cal.com/agostina-sosa-nck3qb";
-    document.getElementById("cal-iframe").src = RESERVAS + "?embed=true&theme=light";
-
-    document.querySelectorAll(".js-reserva").forEach(a => {
-      a.href = RESERVAS;
-      a.target = "_blank";
-      a.rel = "noopener";
-    });
-
-    document.querySelectorAll(".js-chat").forEach(a => {
-      a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MENSAJE)}`;
-      a.target = "_blank";
-      a.rel = "noopener";
-    });
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="datos-respaldo.js?v=1"></script>
+  <script src="app.js?v=1"></script>
 </body>
 </html>
